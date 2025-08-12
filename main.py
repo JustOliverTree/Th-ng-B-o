@@ -3,11 +3,12 @@ from discord import app_commands
 from discord.ext import commands, tasks
 import asyncio
 import datetime
+import os
 
 # =============================
 # CONFIG
 # =============================
-BOT_TOKEN = "MTQwNDc0MDY2NDgyMjA3MTMxNg.GYId7U.fqtiThun3lD2293sZL-joX9NSrYMLYcqLKevoc"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 ANNOUNCEMENTS_CHANNEL_ID = 1404314641521311744
 MC_ANNOUNCEMENTS_CHANNEL_ID = 1404391647017435186
 STAFF_LOG_CHANNEL_ID = 1404316719471792218
@@ -187,4 +188,5 @@ async def on_ready():
 # =============================
 # RUN BOT
 # =============================
+
 bot.run(BOT_TOKEN)
